@@ -17,9 +17,9 @@ namespace GifImporter;
 public class GifImporter : ResoniteMod
     {
     public override string Name    => "GifImporter";
-    public override string Author  => "astral";
-    public override string Version => "1.2.1";
-    public override string Link    => "https://github.com/astralchan/GifImporter";
+    public override string Author  => "jlong23";
+    public override string Version => "1.2.2";
+    public override string Link    => "https://github.com/jlong23/GifImporter";
 
     [AutoRegisterConfigKey]
     public static ModConfigurationKey<bool> KEY_SQUARE = new ModConfigurationKey<bool>(
@@ -29,7 +29,7 @@ public class GifImporter : ResoniteMod
     public static ModConfiguration? config;
 
     public override void OnEngineInit() {
-        Harmony harmony = new Harmony("xyz.astralchan.gifimporter");
+        Harmony harmony = new Harmony("jlong23.GifImporter");
         harmony.PatchAll();
         config = GetConfiguration();
     }
